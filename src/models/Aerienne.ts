@@ -1,0 +1,33 @@
+import { Alimentaire } from "./Alimentaire";
+import { Cargaison } from "./Cargaison";
+import { Materiel } from "./Materiel";
+
+export class Aerienne extends Cargaison {
+  constructor(distance: number= 0) {
+    super(distance); 
+  }
+
+  public calculerMontant(): number {
+      let total = 5000;
+      for (const p of this.getProduits()) {
+        if (p instanceof Alimentaire) {
+          total += 100 * p.getPoids() * this.getDistance();
+        } else if (p instanceof Materiel) {
+          total += 200 * p.getPoids() * this.getDistance();
+        }
+      }
+      return total;
+    }
+  
+    public sommeTotal(){
+      return this.calculerMontant()
+    }
+   
+    public afficherMontantTotal(): void {
+    const montant = this.sommeTotal();
+    const nombreProduits = this.nbproduit();
+    console.log(`Nombre de produits aériens : ${nombreProduits}`);
+    console.log(`Montant total de la Cargaison Aérienne: ${montant} FCFA`);
+   }
+  
+}
