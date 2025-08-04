@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2024",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+     "moduleResolution": "node",
+
+  },
+
+  // "files": [
+  //    "src/index.ts", "src/decorateur.ts", "src/spread.ts", "src/table2Bleu"
+  // ],
+
+  "include": [
+    "src/models"
+  ],
+
+  "exclude": [
+    "node_modules", "cyble", "**/*.dev.ts"
+  ]
+
+}
