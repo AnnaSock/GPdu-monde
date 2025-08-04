@@ -10,7 +10,7 @@ export class Maritime extends Cargaison {
   }
 
  public calculerMontant(): number {
-    let total = 6000;
+    let total = 15000;
 
     for (const p of this.getProduits()) {
       if (p instanceof Alimentaire) {

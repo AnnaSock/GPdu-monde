@@ -8,7 +8,7 @@ export class Routiere extends Cargaison {
   }
 
   public calculerMontant(): number {
-    let total = 0;
+    let total = 5000;
     for (const p of this.getProduits()) {
       if (p instanceof Alimentaire) {
         total += 100 * p.getPoids() * this.getDistance();
